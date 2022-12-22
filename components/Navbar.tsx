@@ -30,7 +30,7 @@ const NavbarList = [
 const anchorLinks = [
   {
     Icon: <FaLinkedinIn />,
-    link: "https://www.linkedin.com/in/jan-vincent-claudio-70723624a/",
+    link: "https://ph.linkedin.com/in/jan-vincent-claudio-70723624a",
     target: "_blank",
     rel: "noreferrer",
     id: "A",
@@ -83,10 +83,10 @@ const Navbar = () => {
         <h1>Logo</h1>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-            {NavbarList.map((navbar) => {
+            {NavbarList.map((navbar, index) => {
               const { title, route } = navbar;
               return (
-                <Link key={title} href={route}>
+                <Link key={index} href={route}>
                   <li className="ml-10 text-sm uppercase hover:border-b">
                     {title}
                   </li>
@@ -136,8 +136,10 @@ const Navbar = () => {
               {NavbarList.map((navbar) => {
                 const { title, route } = navbar;
                 return (
-                  <Link onClick={() => setNav(!nav)} key={title} href={route}>
-                    <li className="py-4 text-sm">{title}</li>
+                  <Link key={title} href={route}>
+                    <li onClick={() => setNav(false)} className="py-4 text-sm">
+                      {title}
+                    </li>
                   </Link>
                 );
               })}
