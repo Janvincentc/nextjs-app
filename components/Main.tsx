@@ -7,7 +7,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 const anchorLinks = [
   {
     Icon: <FaLinkedinIn />,
-    link: "https://www.linkedin.com/in/jan-vincent-claudio-70723624a/",
+    link: "https://ph.linkedin.com/in/jan-vincent-claudio-70723624a",
     target: "_blank",
     rel: "noreferrer",
     id: "A",
